@@ -1,3 +1,5 @@
 /* Including fonts */
 @font-face {
-  src: url("../../fonts/"); }
+  src: url("../../fonts/Kelson Sans RU.ttf");
+  font-family: 'Kelson Sans RU';
+  font-weight: 400; }

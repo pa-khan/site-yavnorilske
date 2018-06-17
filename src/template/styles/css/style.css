@@ -1,12 +1,18 @@
 /* Including styles files */
 /* Including fonts */
+@import url("../../libs/fancybox/dist/jquery.fancybox.css");
+@import url("../../libs/slick-carousel/slick/slick.css");
+@import url("../../libs/slick-carousel/slick/slick-theme.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
 @font-face {
-  src: url("../../fonts/"); }
+  src: url("../../fonts/Kelson Sans RU.ttf");
+  font-family: 'Kelson Sans RU';
+  font-weight: 400; }
 
 /* Grid */
 .case {
   position: relative;
-  width: 1170px;
+  width: 1190px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto; }
@@ -156,8 +162,8 @@
           box-sizing: border-box; }
 
 body {
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
   color: #000;
   background: white; }
 
@@ -202,37 +208,30 @@ img {
   vertical-align: middle; }
 
 /* Form elements */
-.input {
+.input input {
   position: relative;
-  overflow: hidden; }
-  .input__wrap {
-    display: block;
-    font-size: 16px;
-    font-family: "Tahoma", sans-serif;
-    background: white;
-    width: 100%; }
-    .input__wrap:focus + .input__title_hide {
-      opacity: 0; }
-    .input__wrap:focus + .input__title_fade {
-      -webkit-transform: translateX(-100%);
-          -ms-transform: translateX(-100%);
-              transform: translateX(-100%); }
-    .input__wrap:focus + .input__title_none {
-      display: none; }
-  .input__title {
-    -webkit-transition: .5s;
-    transition: .5s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-  .input_default .input__wrap {
-    border: 1px solid gray; }
+  overflow: hidden;
+  display: block;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  background: white;
+  width: 100%; }
+  .input input::-webkit-input-placeholder {
+    opacity: 1;
+    color: #878686; }
+  .input input::-moz-placeholder {
+    opacity: 1;
+    color: #878686; }
+  .input input:-ms-input-placeholder {
+    opacity: 1;
+    color: #878686; }
+  .input input::placeholder {
+    opacity: 1;
+    color: #878686; }
 
 .textarea textarea {
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
   display: block;
   background: white;
   resize: none;
@@ -254,8 +253,8 @@ img {
 .btn {
   position: relative;
   display: block;
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
