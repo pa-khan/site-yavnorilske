@@ -20,7 +20,25 @@ $(document).ready(function($) {
 		infinite: false,
 		dots: true,
 		prevArrow: '<button type="button" class="slick-arrows slick-prev"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.723232 0 1.61538 0H12.3846C13.2768 0 14 0.671573 14 1.5C14 2.32843 13.2768 3 12.3846 3H1.61538C0.723232 3 0 2.32843 0 1.5Z" transform="translate(14 9) rotate(180)" fill="#3E3E4E"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0.510859 0.347704C1.1132 -0.182639 2.0084 -0.0966539 2.51035 0.539758L8 7.5L2.51035 14.4602C2.0084 15.0967 1.1132 15.1826 0.510859 14.6523C-0.0914789 14.122 -0.172861 13.1761 0.329088 12.5397L4.30398 7.5L0.329088 2.4603C-0.172861 1.82389 -0.0914789 0.878047 0.510859 0.347704Z" transform="translate(8)" fill="#3E3E4E"/></svg></button>',
-		nextArrow: '<button type="button" class="slick-arrows slick-next"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.723232 0 1.61538 0H12.3846C13.2768 0 14 0.671573 14 1.5C14 2.32843 13.2768 3 12.3846 3H1.61538C0.723232 3 0 2.32843 0 1.5Z" transform="translate(14 9) rotate(180)" fill="#3E3E4E"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0.510859 0.347704C1.1132 -0.182639 2.0084 -0.0966539 2.51035 0.539758L8 7.5L2.51035 14.4602C2.0084 15.0967 1.1132 15.1826 0.510859 14.6523C-0.0914789 14.122 -0.172861 13.1761 0.329088 12.5397L4.30398 7.5L0.329088 2.4603C-0.172861 1.82389 -0.0914789 0.878047 0.510859 0.347704Z" transform="translate(8)" fill="#3E3E4E"/></svg></button>'
+		nextArrow: '<button type="button" class="slick-arrows slick-next"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.723232 0 1.61538 0H12.3846C13.2768 0 14 0.671573 14 1.5C14 2.32843 13.2768 3 12.3846 3H1.61538C0.723232 3 0 2.32843 0 1.5Z" transform="translate(14 9) rotate(180)" fill="#3E3E4E"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0.510859 0.347704C1.1132 -0.182639 2.0084 -0.0966539 2.51035 0.539758L8 7.5L2.51035 14.4602C2.0084 15.0967 1.1132 15.1826 0.510859 14.6523C-0.0914789 14.122 -0.172861 13.1761 0.329088 12.5397L4.30398 7.5L0.329088 2.4603C-0.172861 1.82389 -0.0914789 0.878047 0.510859 0.347704Z" transform="translate(8)" fill="#3E3E4E"/></svg></button>',
+		responsive: [{
+			breakpoint: 1210,
+			settings: {
+				slidesToShow: 5,
+				slidesToScroll: 5,
+			}}, {
+				breakpoint: 1010,
+				settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4,
+			}}, {
+				breakpoint: 787,
+				settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				dots: false
+			}
+		}]
 	})
 
 	var panel = $('.panel');
@@ -93,12 +111,42 @@ $(document).ready(function($) {
 
 		var windowHeight = $(window).height();
 
-		console.log($(window).scrollTop())
 
 		if (windowHeight <= $(window).scrollTop()) {
 			upBtn.addClass('up-btn_show');
 		} else {
 			upBtn.removeClass('up-btn_show');
 		}
+	});
+
+
+	var mobileBtn = $('.header__mobile-btn'),
+			mobileNav = $('.header__bottom'),
+			mobileContent = $('.main')
+	mobileBtn.click(function(event) {
+		$(this).toggleClass('header__mobile-btn_toggle');
+		mobileNav.slideToggle(500);
+		mobileContent.slideToggle(500);
+	});
+
+	$('.has-subnav > a').click(function(event) {
+		var attr = $(this).attr('href'),
+				li = $(this).parents('li');
+				ul = li.find('ul'),
+				
+
+		event.preventDefault();
+		if ($(window).width() < 787) {
+			ul.slideToggle();
+			li.toggleClass('has-subnav_open');
+		} else{
+			ul.hide();
+			li.removeClass('has-subnav_open');
+			window.location.href = attr;
+		}
+	});
+
+	$('.header__subnav-selected').click(function() {
+		$('.header__subnav-selected + ul').slideToggle(300);
 	});
 });

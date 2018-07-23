@@ -1,13 +1,799 @@
-@media screen and (max-width: 1199px)
+@media screen and (max-width: 1210px)
 	.case
 		width: 950px
+	.panel
+		display: none
+	
+	.header
+		&__nav
+			a
+				font-size: 14px
+		&__subnav
+			li
+				padding-top: 10px
+				padding-bottom: 10px
+				ul
+					top: 40px
+					right: -72px
+					&:before
+						display: none
+			a
+				font-size: 14px
+			
 
+	.btn_border-color
+		background-size: 100%
+		width: 220px
 
-@media screen and (max-width: 970px)
+	.logos
+		width: 100%
+		&_line
+			display: none
+
+	.now
+		&__item
+
+		&__imgslist, &__textlist
+			width: 100%
+
+		&__textlist
+			display: none
+			&.hidden
+				display: block
+				margin-top: 30px
+
+		&__all-news
+			margin-top: 25px
+			
+	.article
+		&__content
+			padding-right: 0
+			
+	.article_big .article__img
+		width: 100%
+
+	.section
+		max-width: 865px
+		width: 100%
+
+	.aside
+		width: 100%
+
+	.title
+		margin-bottom: 25px
+		span, h1, h2, h3
+			font-size: 32px
+
+	.round
+		transform: scale(.8)
+		margin-left: 5px
+	.logos
+		ul
+			margin-left: -10px
+			margin-right: -10px
+		li
+			padding-left: 10px
+			padding-right: 10px
+		&_top, &_bottom, &_articles
+			margin-top: 30px
+			margin-bottom: 40px
+			li
+				width: 25%
+
+	.interesting
+		&__list
+			padding-top: 0
+			margin-left: 0px
+			margin-right: 0px
+		&__item
+			position: relative
+			width: calc(33.333% - 10px)
+
+		&__content
+			padding: 15px 15px 35px
+			
+		&__subtitle
+			font-size: 20px
+			line-height: normal
+			margin-bottom: 13px
+
+		&__text
+			height: auto
+			margin-bottom: 5px
+		&__data
+			position: absolute
+			bottom: 10px
+			left: 15px
+			right: 15px
+			
+	.discussion
+		&__text
+			height: auto
+
+	.afisha
+		&__list
+			.slick-arrow
+				width: 41px
+				height: 41px
+				top: 65px
+			.slick-prev
+				left: 0
+
+			.slick-next
+				right: 0
+
+	.articles
+		.article
+			&__img
+				width: 40%
+			&__content
+				width: 60% !important
+				padding-top: 0
+				padding-left: 15px
+				
+
+	.articles__other 
+		margin-left: -10px
+		margin-right: -10px
+		.article
+			padding-left: 10px
+			padding-right: 10px
+			
+
+	.pagination
+		margin-top: 0
+		ul
+			justify-content: center
+
+			
+	.return
+		padding-bottom: 10px
+		padding-top: 10px
+@media screen and (max-width: 992px)
 	.case
 		width: 750px
 
+	.header
+		&__suggest
+			display: none
+		&__nav
+			ul
+				justify-content: center
+				margin-left: -15px
+				margin-right: -15px
+			li
+				margin-left: 15px
+				margin-right: 15px
+			a
+				font-size: 18px
+			
+	.now
+		&__wrap
+			margin-left: 0
+			margin-right: 0
+			
+		&__left, &__right
+			width: 100%
+			margin-bottom: 20px
+			padding-left: 0
+			padding-right: 0
+		&__textlist
+			padding-left: 0
+			margin-top: 0 !important
 
+		&__imgslist
+			display: flex
+			margin-left: -7px
+			margin-right: -7px
+			.now
+				&__item
+					width: 50%
+					padding-left: 7px
+					padding-right: 7px
+					.article__img
+						width: 100%
+
+	.discussion
+		padding-top: 25px
+		padding-bottom: 0
+		&__item
+			width: calc(50% - 24px)
+			margin-bottom: 55px
+					
+	.footer__nav-left, .footer__nav-right, .footer__data-left, .footer__data-right
+		width: 50%
+
+	.footer__data-left, .footer__data-right
+		margin-top: 25px
+			
+	.articles__other 
+		margin-left: -10px
+		margin-right: -10px
+		.article
+			width: 100%
+			padding-left: 10px
+			padding-right: 10px
+
+	.articles
+		.article__labels
+			margin-bottom: 3px
+
+	.cortege
+		img, p
+			width: 100%
+	.more
+		margin-bottom: 20px
+		&:after
+			margin-top: 20px
+
+	.data
+		display: block
+		&__labels
+			margin-bottom: 15px
+
+	.logos
+		&_article
+			ul
+			margin-left: -10px
+			margin-right: -10px
+			li
+				padding-left: 10px
+				padding-right: 10px
+				width: 33.33%
+
+	.read-more
+		&__list
+			margin-left: -10px
+			margin-right: -10px
+			
+		&__item
+			padding-left: 10px
+			padding-right: 10px
+			width: 33.333%
+			margin-left: 0
+			margin-right: 0
+		.article__img
+			width: 100% !important
+			
+			
 @media screen and (max-width: 767px)
 	.case
 		width: 100%
+	.header
+		&__rates, &__weather, &__search, &__auth, &__small-nav
+			display: none
+
+		&__logo
+			margin-left: auto
+			margin-right: auto
+
+		&__middle
+			padding-top: 19px
+			padding-bottom: 19px
+
+		&__mid-wrap
+			margin-left: -15px
+			margin-right: -15px
+			
+
+		&__rates, &__weather, &__search
+			&.hidden
+				display: block
+		&__middle
+			position: relative
+			margin-left: 0px
+			margin-right: 0px
+			&:after
+				position: absolute
+				content: ''
+				display: block
+				width: 100%
+				height: 1px
+				bottom: 0
+				left: 0
+				right: 0
+				background: -webkit-gradient(linear, right top, left top, from(#5B4895), color-stop(49.17%, #F776CB), to(#FDC218))
+				background: -webkit-linear-gradient(right, #5B4895 0%, #F776CB 49.17%, #FDC218 100%)
+				background: linear-gradient(270deg, #5B4895 0%, #F776CB 49.17%, #FDC218 100%)
+			
+		&__mobile-btn
+			display: block
+			width: 24px
+			height: 19px
+			cursor: pointer
+			span
+				position: relative
+				display: block
+				width: 24px
+				height: 3px
+				background-color: #E8F5FB
+				border-radius: 30px
+				margin-bottom: 5px
+				transition: .3s
+				&:last-of-type
+					margin-bottom: 0
+			&_toggle
+				span
+					&:nth-of-type(1)
+						top: 8px
+						transform: rotate(45deg)
+					&:nth-of-type(2)
+						opacity: 0
+					&:nth-of-type(3)
+						top: -8px
+						transform: rotate(-45deg)
+		&__nav
+			background: none
+			ul
+				li
+					width: 100%
+					margin-left: 0
+					margin-right: 0
+					border-bottom: 1px solid #E8F5FB
+					ul
+						padding-top: 10px
+						padding-bottom: 10px
+						a
+							padding: 5px 40px
+							font-size: 18px
+							text-transform: none
+						li
+							border-bottom: none
+							&.selected, &:hover
+								a
+									color: #F779C5
+				a
+					background: none
+					padding: 13.5px 25px
+					font-size: 16px
+					&:after
+						display: none
+					svg
+						position: absolute
+						display: block
+						right: 25px
+						top: 50%
+						transition: .3s
+						transform: translateY(-50%)
+				.has-subnav
+					&_open
+						> a
+							background: #E8F5FB
+							svg
+								transform: translateY(-50%) rotate(90deg)
+		&__auth-wrap
+			display: block
+			padding-left: 15px
+			padding-right: 15px
+			background-color: #333333
+			padding-top: 11px
+			padding-bottom: 11px
+			margin-top: -1px
+			position: relative
+			.header__auth
+				display: flex
+
+		&__bottom
+			display: none
+			
+		&__subnav
+			display: none
+			background: none
+			margin-bottom: 25px
+			&-selected
+				display: block
+				border: 1px solid #CADEE8
+				padding-top: 0px
+				padding-bottom: 0px
+				line-height: 24px
+				font-size: 24px
+				color: #333333
+				background: url('../../img/arrow-down.png') no-repeat 95% center
+				font-weight: 700
+				font-family: "Kelson Sans", sans-serif
+				padding: 10px 13px
+				cursor: pointer
+				+ ul
+					display: none
+
+			&.hidden
+				display: block
+			ul
+				position: relative
+				border: 1px solid #CADEE8
+				border-top: none
+			li
+				width: 100%
+				border-bottom: 1px solid #CADEE8
+				margin-right: 0
+				font-weight: 700
+				background-color: #fff !important
+				padding-top: 0
+				padding-bottom: 0
+				&:hover
+					a
+						color: #333
+						background: #E8F5FB
+				&:last-of-type
+					border-bottom: none
+				&.selected
+					display: none
+					position: absolute
+					top: -45px
+					left: -1px
+					right: -1px
+					width: auto
+					margin-right: 0
+				a
+					font-size: 16px
+				&.link-more
+					&:hover
+						background: none
+					> a
+						display: none
+					ul
+						display: block
+						position: relative
+						top: 0
+						right: 0
+						width: 100%
+						border: none
+
+					a
+						font-size: 16px
+
+			a
+				display: block
+				padding: 9px 13px
+			
+
+		.auth
+			&__text
+				display: flex
+				justify-content: space-between
+				align-items: center
+			&__link
+				&_enter
+					svg
+						display: none
+					a
+						margin-left: 0
+						color: #fff
+						border-color: transparent
+						font-family: 'Kelson Sans', sans-serif
+						font-size: 16px
+						span
+							display: none
+						&:before
+							content: 'Вход в личный кабинет'
+
+	.now
+		&__imgslist 
+			display: block
+			.now__item
+				width: 100%
+				
+
+	.title
+		margin-bottom: 15px
+		span, h1, h2, h3
+			font-size: 24px
+
+	.round
+		display: none !important
+				
+				
+	.interesting
+		padding-bottom: 20px
+		&__list
+			margin-left: 0
+			margin-right: 0
+			justify-content: center
+
+		&__item
+			width: 100%
+			max-width: 360px
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 10px
+		&__content
+			padding-bottom: 20px
+		&__data
+			display: block
+			position: relative
+			left: 0
+			right: 0
+			margin-top: 15px
+			bottom: 0
+		&__date
+			margin-bottom: 5px
+			
+			
+	.now
+		&__all-news
+			width: 272px
+			margin-left: auto
+			margin-right: auto
+			margin-top: 15px
+	.textarticle
+		&:last-of-type
+			&:after
+				display: none
+	.logos
+		li
+			width: 100%
+			text-align: center
+			margin-bottom: 15px
+			&:last-of-type
+				margin-bottom: 0
+			img
+				margin-left: auto
+				margin-right: auto
+			
+	.logo
+		width: 290px
+	.rates
+		&__title
+			display: none
+		&__item
+			font-size: 10px
+			margin-bottom: 4px
+			&:last-of-type
+				margin-bottom: 0
+			
+		&__count
+			color: #fff
+
+	.weather
+		&__title
+			font-size: 10px
+			color: #FDBC24
+		&__wrap
+			height: 20px
+			line-height: 20px
+			
+		&__img
+			margin-right: 6px
+			width: 22px
+		&__count
+			color: #fff
+			strong
+				font-size: 15px
+			span
+				font-size: 10px
+
+
+	.search
+		position: static
+		width: 27px
+		height: 26px
+		&__btn-open
+			width: 27px
+			height: 26px
+			line-height: normal
+			background: none
+			border: none
+			.icon
+				position: relative
+				top: -2px
+				path
+					stroke: #E8F5FB
+			&:before, &:after
+				display: none
+				content: ''
+				position: relative
+				display: block
+				width: 24px
+				height: 3px
+				background-color: #E8F5FB
+				border-radius: 30px
+				transition: .3s
+				top: 0
+				opacity: 0
+			&:before
+				top: 12px
+				transform: rotate(45deg)
+			&:after
+				top: 9px
+				transform: rotate(-45deg)
+		&__wrap
+			top: 41px
+			left: 0
+			right: 0
+			background: #E8F5FB
+			width: 100% !important
+			border-radius: 0
+			border: none
+			padding: 8px 65px 8px 15px
+			transform: translateX(-100%)
+			&:before
+				position: absolute
+				top: -7px
+				right: 30%
+				content: ''
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 0 7px 7px
+				border-color: transparent transparent #e8f5fb transparent
+
+
+		&__input
+			opacity: 1
+			line-height: 40px
+			background-color: #fff
+			border: 1px solid #D5E7EF
+			padding: 0 10px
+			&::placeholder
+				color: #4F4F4F
+
+		&__btn
+			&:before
+				content: 'Найти'
+				display: inline-block
+				vertical-align: middle
+				line-height: 40px
+				font-size: 14px
+				font-family: 'Kelson Sans', sans-serif
+				text-transform: uppercase
+				font-weight: 700
+			.icon
+				display: none
+			
+		&_toggle
+			.search
+				&__btn-open
+					.icon
+						display: none
+					&:before, &:after
+						opacity: 1
+						display: block
+				&__wrap
+					transform: translateX(0%)
+					
+	.discussion
+		&__item
+			width: 100%
+
+	.afisha
+		padding-top: 25px
+		margin-bottom: 30px
+		&__list
+			.slick-arrow
+				width: 41px
+				height: 41px
+				top: -50px
+
+			.slick-prev
+				left: auto
+				right: 55px
+
+			.slick-next
+				right: 5px
+
+		&__img
+			display: inline-block
+			
+	.footer__nav-left, .footer__nav-right, .footer__data-left, .footer__data-right
+		width: 280px
+		margin-left: auto
+		margin-right: auto
+	
+	.footer
+		padding-top: 25px
+		padding-bottom: 75px
+		&__wrap
+			display: block
+		&__text
+			display: none
+		&__dev
+			position: absolute
+			bottom: -50px
+			left: 50%
+			right: 0
+			width: 164px
+			margin-left: -82px
+			margin-top: 0
+		&__nav
+			margin-left: auto
+			margin-right: auto
+
+		&__socials
+			text-align: center
+			ul
+				justify-content: center
+
+		&__messagers
+			text-align: center
+			
+		&__contacts
+			max-width: 200px
+			margin-left: auto
+			margin-right: auto
+			
+			
+	.footer__data-right
+		display: none
+
+	.articles
+		.article
+			&__img, &__content
+				width: 100% !important
+
+			&__content
+				padding-left: 0 !important
+	
+	.logos_articles
+		margin-top: 0
+
+	.pagination
+		li
+			width: 48px
+			height: 48px
+			line-height: 46px
+		a
+			height: 48px
+		.link-prev, .link-next
+			display: none
+
+	.on-topic
+		float: none
+		width: 100%
+		max-width: 100%
+		margin-left: 0 !important
+		margin-right: 0 !important
+		margin-top: 20px
+		margin-bottom: 20px
+		top: 0
+
+	.data
+		&__btn-comments
+			margin-bottom: 10px
+
+	.comments
+		margin-top: 20px
+
+	.article-page
+		&__head
+			display: block
+			margin-bottom: 15px
+			
+		&__author, &__date, &__comments
+
+		&__date
+			margin-bottom: 2px
+		&__comments, &__views
+			display: inline-block
+			margin-bottom: 3px
+
+		&__label
+			position: relative
+			margin-top: 3px
+			
+	.read-more
+		&__item
+			width: 100%
+			margin-bottom: 30px
+			&:last-of-type
+				margin-bottom: 0
+			
+
+	.video
+		margin-bottom: 0
+			
+
+	#kursvalut-com-informer-regional-388x370-15-norilsk-blue-container
+		overflow-x: scroll
+
+	.iframe_schedule
+		overflow-x: scroll
+
+	.page__wrap
+		min-height: 1px
+@media screen and (max-width: 500px)
+	.search
+		&__wrap
+			&:before
+				right: 28%
+
+			

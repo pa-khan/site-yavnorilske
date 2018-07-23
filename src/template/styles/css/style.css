@@ -331,6 +331,8 @@ img {
       font-size: 16px;
       font-family: "Kelson Sans", sans-serif;
       text-transform: uppercase; }
+    .panel__nav a:hover {
+      color: #F779C5; }
   .panel__auth {
     margin-left: 85px;
     width: 175px; }
@@ -461,7 +463,8 @@ img {
   font-family: "Kelson Sans", sans-serif;
   font-weight: 700;
   letter-spacing: 0.05em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 38px; }
   .header__small-nav ul {
     display: block; }
   .header__small-nav li {
@@ -529,11 +532,15 @@ img {
             justify-content: space-between; }
   .header__nav li.selected a:after, .header__nav li:hover a:after {
     opacity: 1; }
+  .header__nav li ul {
+    display: none; }
   .header__nav a {
     display: block;
     position: relative;
     padding-top: 12px;
     padding-bottom: 10px; }
+    .header__nav a svg {
+      display: none; }
     .header__nav a:hover {
       font-weight: 400; }
     .header__nav a:after {
@@ -553,6 +560,8 @@ img {
 
 .header__subnav {
   background: rgba(232, 245, 251, 0.2); }
+  .header__subnav-selected {
+    display: none; }
   .header__subnav li {
     position: relative;
     font-size: 18px;
@@ -572,14 +581,23 @@ img {
       position: absolute;
       border: 1px solid #CADEE8;
       width: 175px;
-      right: 0;
-      top: 53px;
+      right: -15px;
+      top: 57px;
       background-color: #fff; }
+      .header__subnav li ul:before {
+        content: '';
+        width: 16px;
+        height: 10px;
+        position: absolute;
+        top: -10px;
+        right: 15px;
+        background: url("../../img/triangle.png") no-repeat center; }
       .header__subnav li ul li {
         margin-right: 0;
         padding-top: 0;
         padding-bottom: 0;
-        border-bottom: 1px solid #CADEE8; }
+        border-bottom: 1px solid #CADEE8;
+        width: 100%; }
         .header__subnav li ul li:last-of-type {
           border-bottom: none; }
       .header__subnav li ul a {
@@ -810,6 +828,9 @@ img {
 .logos_article {
   margin-top: 35px;
   margin-bottom: 30px; }
+
+.logos_articles {
+  margin-bottom: 56px; }
 
 .logos ul {
   -webkit-box-pack: justify;
@@ -1108,6 +1129,9 @@ img {
 .aside {
   width: 275px;
   padding-top: 15px; }
+
+.page__wrap {
+  min-height: 400px; }
 
 .article-page__head {
   position: relative;
@@ -1555,3 +1579,43 @@ img {
     font-family: "Kelson Sans", sans-serif;
     text-align: center;
     margin-top: 5px; }
+
+.iframe {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .iframe iframe {
+    position: absolute;
+    top: -420px;
+    left: -220px;
+    width: 100%;
+    height: 100%; }
+  .iframe_schedule {
+    width: 550px;
+    height: 750px;
+    margin-bottom: -45px; }
+    .iframe_schedule iframe {
+      width: 730px;
+      height: 1100px; }
+  .iframe_aeroport {
+    width: 550px;
+    height: 750px;
+    margin-bottom: -45px; }
+    .iframe_aeroport iframe {
+      width: 730px;
+      height: 1100px; }
+  .iframe_svodka {
+    width: 550px;
+    height: 750px;
+    margin-bottom: -45px; }
+    .iframe_svodka iframe {
+      width: 730px;
+      height: 1100px; }
+  .iframe_weather {
+    width: 649px;
+    height: 530px; }
+    .iframe_weather iframe {
+      width: 730px;
+      height: 1100px;
+      left: -15px;
+      top: -198px; }
